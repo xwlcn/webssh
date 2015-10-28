@@ -2,7 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="lang" namespace="/" extends="webssh">
-		<action name="changeLanguage" class="com.webssh.action.LanguageAction">
+		<action name="changeLanguage" class="online.webssh.action.LanguageAction">
 			<result name="success" type="redirect">${lastUrl}</result>
 		</action>
 	</package>
