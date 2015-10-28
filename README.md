@@ -20,16 +20,26 @@ http://caniuse.com/websockets
 
 Screenshots
 -----------
-![Login](http://sshkeybox.com/img/screenshots/medium/login.png)
+![Regist](https://github.com/xwlcn/webssh/raw/master/screenshots/regist.png)
 
-![Two-Factor](http://sshkeybox.com/img/screenshots/medium/two-factor.png)
+![Login](https://github.com/xwlcn/webssh/raw/master/screenshots/login.png)
 
-![More Terminals](http://sshkeybox.com/img/screenshots/medium/more_terms.png)
+![Home](https://github.com/xwlcn/webssh/raw/master/screenshots/home.png)
 
-![Manage Systems](http://sshkeybox.com/img/screenshots/medium/manage_systems.png)
+![Manage Systems](https://github.com/xwlcn/webssh/raw/master/screenshots/login.png)
 
-![Manage Users](http://sshkeybox.com/img/screenshots/medium/manage_users.png)
+![User Center](https://github.com/xwlcn/webssh/raw/master/screenshots/usercenter.png)
 
-![Define SSH Keys](http://sshkeybox.com/img/screenshots/medium/manage_keys.png)
+![Open Machine](https://github.com/xwlcn/webssh/raw/master/screenshots/openmachine.png)
 
-![Disable SSH Keys](http://sshkeybox.com/img/screenshots/medium/disable_keys.png)
+![Shell](https://github.com/xwlcn/webssh/raw/master/screenshots/shell.png)
+
+![Delete Machine](https://github.com/xwlcn/webssh/raw/master/screenshots/deletemachine.png)
+
+![Modify Permissions](https://github.com/xwlcn/webssh/raw/master/screenshots/modifypermissions.png)
+
+![Delete File](https://github.com/xwlcn/webssh/raw/master/screenshots/deletefile.png)
+
+![Upload File](https://github.com/xwlcn/webssh/raw/master/screenshots/uploadfile.png)
+
+![Change Directory](https://github.com/xwlcn/webssh/raw/master/screenshots/changedir.png)
