@@ -20,10 +20,10 @@
     <websocket:handlers>
         <websocket:mapping path="/term" handler="sshShellHandler" />
         <websocket:handshake-interceptors>
-            <bean class="com.webssh.websocket.intercepter.HandshakeInterceptor" />
+            <bean class="online.webssh.websocket.intercepter.HandshakeInterceptor" />
         </websocket:handshake-interceptors>
     </websocket:handlers>
     
-    <bean id="sshShellHandler" class="com.webssh.websocket.SshShellHandler" />
+    <bean id="sshShellHandler" class="online.webssh.websocket.SshShellHandler" />
 
 </beans>

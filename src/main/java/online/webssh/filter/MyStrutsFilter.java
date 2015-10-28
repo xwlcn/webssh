@@ -14,11 +14,10 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter;
 
-import com.webssh.utils.DeepCopyUtil;
-import com.webssh.utils.SpringContextUtil;
-
 import online.webssh.pojos.User;
 import online.webssh.service.UserService;
+import online.webssh.utils.DeepCopyUtil;
+import online.webssh.utils.SpringContextUtil;
 
 public class MyStrutsFilter extends StrutsPrepareAndExecuteFilter{
     @Override

@@ -1,4 +1,4 @@
-package com.webssh.utils;
+package online.webssh.utils;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;

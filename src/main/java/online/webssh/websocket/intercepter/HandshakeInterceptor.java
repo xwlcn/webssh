@@ -1,4 +1,4 @@
-package com.webssh.websocket.intercepter;
+package online.webssh.websocket.intercepter;
 
 import java.util.Map;
 

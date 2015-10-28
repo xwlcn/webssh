@@ -13,9 +13,9 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import com.webssh.utils.WebSshUtil;
 
 import online.webssh.beans.MessageBean;
+import online.webssh.utils.WebSshUtil;
 
 public class BaseAction<T> extends ActionSupport implements SessionAware, ServletResponseAware, ServletRequestAware, ModelDriven<T>{
 

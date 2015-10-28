@@ -1,11 +1,11 @@
-package com.webssh.websocket;
+package online.webssh.websocket;
 
 import java.io.InputStream;
 
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import com.webssh.utils.WebSshUtil;
+import online.webssh.utils.WebSshUtil;
 
 public class ShellOutPutTask extends Thread{
 	

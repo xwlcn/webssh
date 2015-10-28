@@ -1,4 +1,4 @@
-package com.webssh.utils;
+package online.webssh.utils;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;

@@ -1,4 +1,4 @@
-package com.webssh.utils;
+package online.webssh.utils;
 
 import java.util.Collection;
 import java.util.regex.Matcher;

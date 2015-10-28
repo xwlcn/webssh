@@ -9,9 +9,6 @@ import java.io.UnsupportedEncodingException;
 import org.apache.struts2.ServletActionContext;
 
 import com.alibaba.fastjson.JSON;
-import com.webssh.utils.EndecryptUtil;
-import com.webssh.utils.ValidateUtil;
-import com.webssh.utils.WebSshUtil;
 
 import online.webssh.beans.CodeMsg;
 import online.webssh.beans.MessageBean;
@@ -20,6 +17,9 @@ import online.webssh.pojos.Machine;
 import online.webssh.pojos.User;
 import online.webssh.service.MachineService;
 import online.webssh.sftp.SftpClient;
+import online.webssh.utils.EndecryptUtil;
+import online.webssh.utils.ValidateUtil;
+import online.webssh.utils.WebSshUtil;
 
 public class MachineAction extends BaseAction<Machine>{
 

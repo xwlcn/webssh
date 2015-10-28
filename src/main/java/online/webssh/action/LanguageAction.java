@@ -5,7 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.webssh.utils.WebSshUtil;
+
+import online.webssh.utils.WebSshUtil;
 
 public class LanguageAction extends ActionSupport{
 

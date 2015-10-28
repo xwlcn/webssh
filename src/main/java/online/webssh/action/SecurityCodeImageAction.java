@@ -6,8 +6,9 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.webssh.utils.SecurityCode;
-import com.webssh.utils.SecurityImage;
+
+import online.webssh.utils.SecurityCode;
+import online.webssh.utils.SecurityImage;
 
 
 public class SecurityCodeImageAction  extends ActionSupport  implements SessionAware{

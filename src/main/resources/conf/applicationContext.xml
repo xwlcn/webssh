@@ -50,7 +50,7 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods" />
     </aop:config>
     
-    <bean id="springContextUtil" class="com.webssh.utils.SpringContextUtil"/>
+    <bean id="springContextUtil" class="online.webssh.utils.SpringContextUtil"/>
     
     <bean id="securityCodeImageAction" class="online.webssh.action.SecurityCodeImageAction" scope="prototype"/>
     

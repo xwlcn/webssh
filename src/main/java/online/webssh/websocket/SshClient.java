@@ -1,4 +1,4 @@
-package com.webssh.websocket;
+package online.webssh.websocket;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -8,10 +8,9 @@ import java.io.OutputStreamWriter;
 
 import org.springframework.web.socket.WebSocketSession;
 
-import com.webssh.utils.EndecryptUtil;
-
 import ch.ethz.ssh2.Connection;
 import online.webssh.pojos.Machine;
+import online.webssh.utils.EndecryptUtil;
 
 public class SshClient {
 	

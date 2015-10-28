@@ -1,4 +1,4 @@
-package com.webssh.websocket;
+package online.webssh.websocket;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -16,8 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-import com.webssh.utils.EndecryptUtil;
-
 import ch.ethz.ssh2.Connection;
 import ch.ethz.ssh2.SFTPv3Client;
 import ch.ethz.ssh2.SFTPv3DirectoryEntry;
@@ -26,6 +24,7 @@ import ch.ethz.ssh2.SFTPv3FileHandle;
 import online.webssh.beans.SftpBean;
 import online.webssh.beans.SftpFileBean;
 import online.webssh.pojos.Machine;
+import online.webssh.utils.EndecryptUtil;
 
 public class SftpClient {
 	
