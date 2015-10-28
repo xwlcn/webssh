@@ -1,0 +1,437 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	background: #f9f9f9;
+}
+
+html, body {
+	height: 100%;
+}
+
+.verifyCode {
+	height: 33px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.blank {
+	padding-bottom: 70px;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -160px;
+}
+
+.footer {
+	margin:auto;
+	position: relative;
+	height: 160px;
+	width:100%;
+}
+
+.push {
+	position: relative;
+	height: 180px;
+}
+
+.register-container, .login-container {
+	padding-bottom: 50px;
+	background: #fff;
+	box-shadow: 0px 1px 3px 0px #ccc;
+	overflow: hidden;
+}
+
+.register-title, .login-title {
+	font-size: 18px;
+	text-align: center;
+	height: 46px;
+	color: #525252;
+	border-bottom: 1px #CACACA solid;
+	padding-top: 13px;
+	margin-top: 20px;
+}
+
+.register-body, .login-body {
+	background: white;
+	padding: 20px 21px 21px;
+}
+
+.register-right, .login-right {
+	padding: 40px 21px 21px;
+}
+
+.submit {
+	border-top: 1px dashed #CCD7E0;
+	text-align: center;
+	padding: 15px 0 0 0;
+}
+
+.register-footer, .login-footer {
+	text-align: center;
+	color: #b5b6b6;
+	margin-top: 50px;
+	font-size: 12px;
+}
+
+.register-footer, .login-footer a {
+	text-decoration: none;
+}
+
+.register-footer, .login-footer a:nth-child(1) {
+	color: #B5B6B6;
+	margin-right: 60px;
+}
+
+.register-footer, .login-footer a:nth-child(2) {
+	color: #6d6e6e;
+}
+
+.register-footer, .login-footer a:hover {
+	text-decoration: underline;
+}
+
+.message {
+	margin: 5px 0;
+	color: #f66;
+	font-size: 11px;
+}
+
+.opr {
+	width: 214px;
+	text-align: center;
+}
+
+.table>tbody>tr>td {
+	vertical-align: middle;
+}
+
+.pagination {
+	margin: 0;
+}
+
+.console-area {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	background: black;
+	color: green;
+	border: none
+}
+
+.col-md-9 {
+	padding-left: 0;
+}
+
+.machinelist>tbody>tr>td:nth-child(1) {
+	text-align: center;
+}
+
+.machinelist>tbody>tr>td:nth-child(2), .machinelist>thead>tr>th:nth-child(2)
+	{
+	width: 80px;
+	text-align: center;
+}
+
+.note {
+	position: absolute;
+	margin: 40px 20px 0 30px;
+	padding: 18px 20px;
+	/* background: #eee; */
+	text-decoration: none;
+	background: #ffc;
+	display: block;
+	padding: 20px;
+
+	width: 176px;
+	box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-ms-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+	font-size: 14px;
+	cursor: point;
+}
+
+.note #date {
+	font-size: 14px;
+}
+
+.hsplit {
+	clear: both;
+	padding: 10px;
+	border: none;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.lastinfo {
+	margin: 10px 20px 20px 20px;
+	padding: 18px 20px;
+	/* background: #eee; */
+	text-decoration: none;
+	background: #ffc;
+	display: block;
+	padding: 20px;
+	width: 180px;
+	box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-ms-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+	font-size: 14px;
+	float: left;
+}
+
+.note:nth-child(1) {
+	background: #eee;
+}
+
+.note:nth-child(2n) {
+	background: #ffc;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}
+
+.note:nth-child(3n) {
+	background: #cff;
+	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+}
+
+.note:nth-child(4n) {
+	background: #99f;
+	transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+}
+
+.note:nth-child(5n) {
+	background: #fcf;
+	transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+
+.note:nth-child(6n) {
+	background: #3c9;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+}
+
+.note:nth-child(7n) {
+	background: #699;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+}
+
+.note-read {
+	float: right;
+	vertical-align: bottom;
+}
+
+.box {
+	padding: 10px 20px 30px 30px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	height: 211px;
+}
+
+.box ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box ul li {
+	line-height: 28px;
+}
+
+.box h3 {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.icon-if {
+	vertical-align: middle !important;
+	margin-right: 5px;
+}
+
+.icon-if-checkmark-green {
+	background-image:
+		url("https://cdn2.iconfinder.com/static/b8f60f4d8c7eba9114a36481bae51c41/assets/img/checkmark-green.png");
+}
+
+.window {
+	border-radius: 3px;
+	border: 1px solid green;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	background: #eee;
+	overflow: hidden;
+}
+
+.window .window-toolbar {
+	padding: 0 4px;
+	overflow: hidden;
+}
+
+.window .window-toolbar i {
+	background: #f00;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 100px;
+	float: left;
+	margin: 8px;
+	margin-right: 0;
+}
+
+.window .window-toolbar i.red {
+	background-color: #ff5f57;
+}
+
+.window .window-toolbar i.yellow {
+	background-color: #ffbd2e;
+}
+
+.window .window-toolbar i.green {
+	background-color: #2ace42;
+}
+
+.window .window-toolbar span {
+	text-align: center;
+	max-width: 150px;
+	margin: auto;
+	display: block;
+	font-family: Menlo;
+	margin-top: 6px;
+	font-size: 12px;
+	color: #999;
+}
+
+.window-content {
+	height: 180px;
+	background: #000;
+}
+
+.clear-left {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.clear-right {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.file-terminal-list {
+	
+}
+
+.file-terminal-list li {
+	line-height: 15px;
+}
+
+.file-terminal-list li:nth-child(n) {
+	border-radius: 0;
+}
+.panel-group .panel {
+	border-radius: 0;
+}
+.panel-group .panel+.panel {
+  margin-top: 0;
+}
+.mypanel {
+	border-radius: 0;
+	margin: 0;
+}
+.mypanel-heading {
+	border-radius: 0;
+}
+.clear-top {
+	border-top: none;
+}
+.note-title{
+	ext-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	color:blue
+}
+.note-content{
+	ext-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+.more{
+	font-size:14px;padding:4px 0;
+}
+#book-title{
+	color:#fff;clear:both;
+}
+#book-opr{
+	font-size:30px;
+}
+#book-bottom{
+	width:100%;text-align:center;
+}
+.a-note-title{
+	display:block;
+	width:220px;  
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+.terminal-input{
+	z-index: 0;
+  height: 1em;
+  opacity: 0;
+  background: red;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  font: inherit;
+  margin: 0 -1px;
+  text-indent: -1em;
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;
+  color: #9c9c9c;
+  border: 2px solid #2b2b2b;
+  padding: 5px 2px;
+  resize: none;
+  left: -1000%;
+  width: 8.4px;
+}

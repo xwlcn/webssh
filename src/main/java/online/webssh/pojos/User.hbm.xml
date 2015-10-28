@@ -1,0 +1,19 @@
+<?xml version="1.0"?>  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="online.webssh.pojos">
+	<class name="User" table="USER">
+		<id name="id" column="ID" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="nick" column="NICK" not-null="true" unique="true" type="string"></property>
+		<property name="email" column="EMAIL" not-null="true" unique="true" type="string"></property>
+		<property name="password" column="PASSWORD" type="string"></property>
+		<property name="level" column="LEVEL" type="int" length="1"></property>
+		<property name="facePath" column="FACEPATH"></property>
+		<property name="regTime" column="REGTIME" type="timestamp"></property>
+		<property name="lastLoginTime" column="LAST_LOGIN_TIME" type="timestamp"></property>
+		<property name="lastLoginIP" column="LAST_LOGIN_IP" type="string" length="16"></property>
+	</class>
+</hibernate-mapping>

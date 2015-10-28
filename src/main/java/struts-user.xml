@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" namespace="/user" extends="webssh">
+	
+		<action name="file_*" class="fileUploadAction" method="{1}">
+			<interceptor-ref name="tokenSession"></interceptor-ref>
+			<interceptor-ref name="fileUpload">  
+                <param name="allowedTypes">
+                  image/bmp,image/png,image/gif,image/jpeg,image/pjpeg  
+                </param>
+                <param name="maximumSize">1024*1024*2</param>
+            </interceptor-ref>
+            <interceptor-ref name="websshInterceptorStack"></interceptor-ref>
+			<result name="{1}">{1}.jsp</result>
+			<result name="input">{1}.jsp</result>
+			<result name="invalid.token">{1}.jsp</result>
+		</action>
+	
+		<action name="user_*Page" class="userAction" method="{1}Page">
+			<result name="{1}Page">{1}.jsp</result>
+		</action>
+
+		<action name="logout" class="userAction" method="logout">
+			<result name="logout" type="redirect">/index.jsp</result>
+		</action>
+		
+		<action name="register" class="userAction" method="register">
+			<result name="register" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="login" class="userAction" method="login">
+			<result name="login" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="check*" class="userAction" method="check{1}">
+			<result name="check{1}" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="updatePassword" class="userAction" method="updatePassword">
+			<result name="updatePassword" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>    

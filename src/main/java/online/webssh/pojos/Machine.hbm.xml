@@ -1,0 +1,17 @@
+<?xml version="1.0"?>  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="online.webssh.pojos">
+	<class name="Machine" table="MACHINE">
+		<id name="id" column="ID" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="NAME" type="string"></property>
+		<property name="hostname" column="HOSTNAME" type="string"></property>
+		<property name="username" column="USERNAME" type="string"></property>
+		<property name="password" column="PASSWORD" type="string"></property>
+		<property name="port" column="PORT" type="java.lang.Integer"></property>
+		<many-to-one name="user" column="UID" class="User"></many-to-one>
+	</class>
+</hibernate-mapping>

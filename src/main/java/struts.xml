@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.custom.i18n.resources" value="page" />
+	<constant name="struts.action.excludePattern" value="/term*,/css/*,/fonts/*,/images/*,/js/*" />
+	<constant name="struts.multipart.saveDir" value="d:\"></constant>
+	<constant name="struts.action.extension" value=","/>
+	
+	<include file="struts-image.xml"/>
+	<include file="struts-user.xml"/>
+	<include file="struts-lang.xml"/> 
+	<include file="struts-machine.xml"/>
+	<include file="struts-note.xml"/>
+	
+	<package name="webssh" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="websshInterceptorStack">
+				<interceptor-ref name="modelDriven">
+					<param name="refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+            	<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="websshInterceptorStack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="notlogin" type="redirectAction">user_loginPage</result>
+			<result name="illegalOperation" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</global-results>
+		
+		<action name="index" class="indexAction" method="index">
+			<result>home.jsp</result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="note" namespace="/user" extends="webssh">
+
+		<action name="note_*Page" class="noteAction" method="{1}Page">
+			<result name="{1}Page">{1}.jsp</result>
+		</action>
+		
+		<action name="notelist" class="noteAction" method="notelist">
+			<result name="notelist">notelist.jsp</result>
+		</action>
+		
+		<action name="deleteNotes" class="noteAction" method="deleteNotes">
+			<result name="deleteNotes" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="*Note" class="noteAction" method="{1}Note">
+			<result name="{1}Note" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+	</package>
+</struts>    

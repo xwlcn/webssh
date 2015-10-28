@@ -1,0 +1,17 @@
+<?xml version="1.0"?>  
+<!DOCTYPE hibernate-mapping PUBLIC   
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="online.webssh.pojos">
+	<class name="Note" table="NOTE">
+		<id name="id" column="ID" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="title" column="TITLE" type="string" length="20"></property>
+		<property name="writeTime" column="WRITE_TIME" type="timestamp"></property>
+		<property name="content" column="CONTENT" type="string" length="3000"></property>
+		<property name="finished" column="FINISHED" type="java.lang.Boolean"></property>
+		
+		<many-to-one name="user" column="UID" class="User"></many-to-one>
+	</class>
+</hibernate-mapping>

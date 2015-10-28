@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config/>
+	<import resource="applicationContext-user.xml"/>
+	<import resource="applicationContext-machine.xml"/>
+	<import resource="applicationContext-note.xml"/>
+	
+	<context:property-placeholder location="classpath:conf/jdbc.properties"/>
+	
+	<bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClass}"/>
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
+		<property name="user" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.password}"/>
+		<property name="initialPoolSize" value="${c3p0.pool.init}"/>
+		<property name="maxPoolSize" value="${c3p0.pool.max}"/>
+		<property name="minPoolSize" value="${c3p0.pool.min}"/>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:conf/hibernate.cfg.xml" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:online/webssh/pojos</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:advice id="txAdvice" transaction-manager="transactionManager" >
+		<tx:attributes>
+            <tx:method name="get*" read-only="true" />
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+	</tx:advice>
+	<aop:config>
+        <aop:pointcut id="serviceMethods" expression="execution(* online.webssh.service.impl.*.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods" />
+    </aop:config>
+    
+    <bean id="springContextUtil" class="com.webssh.utils.SpringContextUtil"/>
+    
+    <bean id="securityCodeImageAction" class="online.webssh.action.SecurityCodeImageAction" scope="prototype"/>
+    
+    <bean id="indexAction" class="online.webssh.action.IndexAction" scope="prototype"/>
+    
+    <bean id="fileUploadAction" class="online.webssh.action.FileUploadAction" scope="prototype">
+    	<property name="userService" ref="userService"></property>
+    </bean>
+</beans>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 10G -->
+	<constant name="struts.multipart.maxSize" value="1099511627780"/>
+	<package name="machine" namespace="/user" extends="webssh">
+	
+		<action name="downloadFile" class="machineAction" method="downloadFile" >
+             <result name="success" type="stream">
+                 <param name="contentType">
+                    application/octet-stream;
+                 </param>
+                 <param name="contentDisposition">
+                   attachment;filename="${fileFileName}"
+                 </param>
+                 <param name="inputName">inputStream</param>
+             </result>
+         </action>
+		
+	
+		<action name="uploadState" class="machineAction" method="uploadState">
+			<result name="uploadState" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	
+		<action name="execCommand" class="machineAction" method="execCommand">
+			<result name="execCommand" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			 <interceptor-ref name="fileUpload">
+                <param name="savePath">/data</param>  
+                <param name="maximumSize">1024*1024*1024*1024</param> 
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	
+		<action name="connectSftp" class="machineAction" method="connectSftp">
+			<result name="connectSftp" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	
+		<action name="stopConnection" class="machineAction" method="stopConnection">
+			<result>
+				<param name="contentType">text/html</param>
+				<param name="inputName">success</param>
+			</result>
+		</action>
+
+		<action name="machine_*Page" class="machineAction" method="{1}Page">
+			<result name="{1}Page">{1}.jsp</result>
+		</action>
+		
+		<action name="machinelist" class="machineAction" method="machinelist">
+			<result name="machinelist">machinelist.jsp</result>
+		</action>
+		
+		<action name="deleteMachines" class="machineAction" method="deleteMachines">
+			<result name="deleteMachines" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="*Machine" class="machineAction" method="{1}Machine">
+			<result name="{1}Machine" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	</package>
+</struts>    

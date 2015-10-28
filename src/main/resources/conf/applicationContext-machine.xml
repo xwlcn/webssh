@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+         
+    <bean id="machineDao" class="online.webssh.dao.impl.MachineDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="machineService" class="online.webssh.service.impl.MachineServiceImpl">
+		<property name="dao" ref="machineDao"></property>
+	</bean>
+
+	<bean id="machineAction" class="online.webssh.action.MachineAction" scope="prototype">
+		<property name="machineService" ref="machineService"></property>
+	</bean>
+
+</beans>
