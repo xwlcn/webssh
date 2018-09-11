@@ -1,6 +1,8 @@
-####Web ssh shell & sftp
+Web ssh shell & sftp
+--------------------
 Just for fun!
-####Prerequisites
+Prerequisite
+-------------------
 * Java JDK 1.7 or greater
 http://www.oracle.com/technetwork/java/javase/overview/index.html
 
@@ -10,7 +12,8 @@ https://tomcat.apache.org
 * Browser with Web Socket support
 http://caniuse.com/websockets
 
-####Screenshots
+Screenshots
+--------------
 ![Regist](https://github.com/xwlcn/webssh/raw/master/screenshots/regist.png)
 
 ![Login](https://github.com/xwlcn/webssh/raw/master/screenshots/login.png)
